@@ -92,7 +92,7 @@ Use this version if you want to record it with pauses:
 
 **Precision and reformulation**
 - “Rephrase this idea in simpler English: effective communication depends on context and audience.” [pause 5s]
-- “Ask for clarification if something is ambiguous.” [pause 4s]
+- “If anything is unclear, feel free to ask me for clarification.” [pause 4s]
 
 **Closing**
 - “What would you improve in your English and why?” [pause 5s]
