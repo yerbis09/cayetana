@@ -47,14 +47,17 @@
   .btn.stop{background:#c98a8a}
   .btn.stop:hover{background:#b57272}
   .btn:disabled{opacity:.4;cursor:not-allowed}
-  .btn.upload{background:#4285F4;display:inline-block;text-decoration:none}
-  .btn.upload:hover{background:#3367d6}
   #status{color:var(--soft);margin:12px 0;min-height:22px}
   audio{width:100%;margin-top:14px}
   .dot{display:inline-block;width:10px;height:10px;background:#e05555;border-radius:50%;margin-right:6px;animation:pulse 1s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   footer{text-align:center;color:var(--soft);font-size:.85rem;margin-top:40px}
   .tips{font-size:.9rem;color:var(--soft);text-align:center;margin-top:10px}
+  .formbox{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:20px;margin:18px 0;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.03)
+  }
+  .formbox iframe{width:100%;max-width:640px;border:none;border-radius:12px}
 </style>
 </head>
 <body>
@@ -83,15 +86,9 @@
   </div>
 
   <div class="breathe" id="uploadBox" hidden>
-    ✅ Great job! Now save your audio to Google Drive:<br/>
+    ✅ Great job! Two tiny steps to send your audio:<br/>
     <strong>1.</strong> Download your recording (button above).<br/>
-    <strong>2.</strong> Click below and upload the file — it goes straight to Drive.
-    <div style="margin-top:14px">
-      <!-- 👉 PEGA AQUÍ TU ENLACE DE GOOGLE FORM / DRIVE (reemplaza el href de abajo) -->
-      <a class="btn upload" id="uploadLink"
-         href="PEGA_AQUI_TU_ENLACE_DE_GOOGLE_FORM"
-         target="_blank" rel="noopener">📤 Upload my audio to Google Drive</a>
-    </div>
+    <strong>2.</strong> Upload it in the form below — it saves straight to Drive. 💚
   </div>
 
   <!-- QUESTIONS -->
@@ -129,6 +126,13 @@
     <span class="time">12:00 – 15:00 · Closing</span>
     <h2><span class="step">6</span>Almost done 💛</h2>
     <ul><li>What would you improve in your English, and why?</li><li>Do you have any questions for me?</li></ul>
+  </div>
+
+  <!-- GOOGLE FORM (uploads to Drive) -->
+  <div class="formbox">
+    <h2 style="color:var(--accent-dark);margin:0 0 6px">📤 Send your audio</h2>
+    <p class="tips">Upload your recording here — it goes straight to Google Drive.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyPVXU1ArSgOi2q_pcDc5zxJgBFuVxr9xj1PEL0wUud0RCsA/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 
   <div class="breathe">
