@@ -41,7 +41,8 @@
   }
   .btn{
     background:var(--accent);color:#fff;border:none;border-radius:30px;
-    padding:14px 26px;font-size:1rem;cursor:pointer;margin:6px;transition:.2s;font-weight:600
+    padding:14px 26px;font-size:1rem;cursor:pointer;margin:6px;transition:.2s;font-weight:600;
+    text-decoration:none;display:inline-block
   }
   .btn:hover{background:var(--accent-dark)}
   .btn.stop{background:#c98a8a}
@@ -57,7 +58,6 @@
     background:var(--card);border:1px solid var(--line);border-radius:16px;
     padding:20px;margin:18px 0;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.03)
   }
-  .formbox iframe{width:100%;max-width:640px;border:none;border-radius:12px}
 </style>
 </head>
 <body>
@@ -88,7 +88,7 @@
   <div class="breathe" id="uploadBox" hidden>
     ✅ Great job! Two tiny steps to send your audio:<br/>
     <strong>1.</strong> Download your recording (button above).<br/>
-    <strong>2.</strong> Upload it in the form below — it saves straight to Drive. 💚
+    <strong>2.</strong> Attach it to an email using the button at the bottom. 💚
   </div>
 
   <!-- QUESTIONS -->
@@ -128,11 +128,12 @@
     <ul><li>What would you improve in your English, and why?</li><li>Do you have any questions for me?</li></ul>
   </div>
 
-  <!-- GOOGLE FORM (uploads to Drive) -->
+  <!-- SEND YOUR AUDIO -->
   <div class="formbox">
     <h2 style="color:var(--accent-dark);margin:0 0 6px">📤 Send your audio</h2>
-    <p class="tips">Upload your recording here — it goes straight to Google Drive.</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyPVXU1ArSgOi2q_pcDc5zxJgBFuVxr9xj1PEL0wUud0RCsA/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <p class="tips">When you've downloaded your recording, send it to me by email 💚</p>
+    <a class="btn" href="mailto:gcaeiroveloso@gmail.com?subject=My%20English%20interview%20recording&body=Hi!%20Here%20is%20my%20English%20interview%20recording.%20(Please%20attach%20the%20downloaded%20audio%20file.)">✉️ Send by email</a>
+    <p class="tips" style="margin-top:14px">Tip: tap the download button first, then attach that file to the email.</p>
   </div>
 
   <div class="breathe">
@@ -178,7 +179,7 @@ startBtn.onclick = async () => {
 stopBtn.onclick = () => {
   mediaRecorder.stop();
   startBtn.disabled = false; stopBtn.disabled = true;
-  status.textContent = 'Saved! You can listen below and then upload. 💚';
+  status.textContent = 'Saved! You can listen below and then email it. 💚';
 };
 </script>
 </body>
